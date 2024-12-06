@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Manipulation 🤪</title>
+
+    <style>
+        .box {
+            background: green;
+            width: 250px;
+            height: 250px;
+        }
+
+        .orange {
+            background-color: orange;
+        }
+
+        .blueviolet {
+            background-color: blueviolet;
+        }
+
+        button {
+            background-color: orange;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            padding: 10px 10px;
+            margin: 20px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="box"></div>
+
+    <button>Make it BlueViolet</button>
+
+    <script>
+
+        function makeItBlueViolet() {
+            let box = document.querySelector(".box");
+            box.classList.add("blueviolet");
+        }
+
+        let button = document.querySelector("button");
+        button.addEventListener("click", makeItBlueViolet);
+
+    </script>
+</body>
+
+</html>
