@@ -8,7 +8,7 @@
 
     <style>
         body {
-            background: plum
+            background: linear-gradient(221deg, rgb(236, 196, 209) 0%, rgb(139, 102, 241) 100%);
         }
 
         h1,
@@ -55,7 +55,7 @@
 
         .wikipedia {
             text-decoration: none;
-            color: black;
+            color: plum;
             transition: all 150ms ease-in-out;
         }
 
@@ -115,14 +115,24 @@
 
         footer {
             text-align: center;
-            margin-top: 30px;
+            margin-top: 10px;
+        }
+
+        /* dark theme code below */
+        .dark {
+            background: #181713;
+            color: white;
+        }
+
+        .dark .container {
+            background-color: #696965;
         }
     </style>
 
 </head>
 
 <body>
-    <button class="theme-button">Dark theme</button>
+    <button class="theme-button">Change theme</button>
 
     <div class="container">
         <h1>What is Pottery ? </h1>
@@ -144,7 +154,8 @@
 
         <p>Pottery is the art of shaping and forming clay into useful or decorative items, which are hardened by heating
             in
-            a kiln. Pottery is a creative and relaxing activity that helps people express themselves, feel accomplished,
+            a kiln. </br>Pottery is a creative and relaxing activity that helps people express themselves, feel
+            accomplished,
             and
             enjoy a sense of calm. </br>
             It’s also practical, as you can make items you use every day, and sustainable, as it
@@ -157,6 +168,27 @@
     </div>
 
     <footer>Coded with 💜 by Tirza Samosir</footer>
+
+    <!--Below is the JS code-->
+
+    <script>
+
+        function changeTheme() {
+            let body = document.querySelector("body");
+
+            //  body.classList.toggle("dark");
+
+            if (body.classList.contains("dark")) {
+                body.classList.remove("dark")
+            } else {
+                body.classList.add("dark");
+            }
+        }
+
+        let themeButton = document.querySelector(".theme-button");
+        themeButton.addEventListener("click", changeTheme);
+
+    </script>
 
 </body>
 
