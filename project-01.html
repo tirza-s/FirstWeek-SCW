@@ -4,90 +4,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hobby 🍵</title>
+    <title>Pottery project 🍵</title>
 
     <style>
         body {
-            background: linear-gradient(221deg, rgb(236, 196, 209) 0%, rgb(139, 102, 241) 100%);
+            background: #1e1d1f;
         }
 
         h1,
-        h2,
-        .container {
+        h2 {
             text-align: center;
         }
 
+        /* base font color for dark theme */
+        h1,
+        h2,
+        p,
+        .theme-button,
+        .contact-button,
+        .wikipedia,
+        footer {
+            color: #e5e5f7;
+        }
+
         .container {
-            background: white;
+            background: #4d4b4f;
             border-radius: 10px;
             max-width: 600px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 25px;
         }
 
-        img {
-            text-align: center;
-        }
-
-        button {
-            border: 1px solid plum;
-            border-radius: 5px;
-            background: white;
+        /* theme button bellow  */
+        .theme-button {
+            border: 1px solid #4d4b4f;
+            border-radius: 50px;
+            background: #4d4b4f;
             display: block;
-            font-size: 18px;
-            padding: 5px 10px;
+            font-size: 15px;
+            font-weight: bold;
+            padding: 15px 20px;
             margin: 0 auto;
             margin-top: 25px;
+            margin-bottom: 40px;
+            transition: all 150ms ease-in-out;
+        }
+
+        .theme-button:hover {
+            cursor: pointer;
+            background-color: #9374df;
+        }
+
+        .contact-button {
+            border: 1px solid #9374df;
+            border-radius: 50px;
+            background: #9374df;
+            display: block;
+            font-size: 20px;
+            font-weight: bold;
+            padding: 12px 20px;
+            margin: 0 auto;
+            margin-top: 50px;
             margin-bottom: 25px;
             transition: all 150ms ease-in-out;
         }
 
-        button:hover {
-            background-color: plum;
-        }
-
-        button a {
-            text-decoration: none;
-            color: black;
+        .contact-button:hover {
             cursor: pointer;
-            margin-top: 25px;
-        }
-
-        .wikipedia {
-            text-decoration: none;
-            color: plum;
-            transition: all 150ms ease-in-out;
-        }
-
-        .wikipedia:hover {
-            text-decoration: underline;
-            color: plum;
-        }
-
-        .theme-button {
-            background: black;
-            color: white;
-            font-size: 12px;
-            padding: 8px 12px;
-        }
-
-        .theme-button:hover {
-            color: black;
             background-color: white;
-        }
-
-        .pottery-intro-image {
-            border-radius: 10px;
-            transition: all 150ms ease-in-out
-        }
-
-        .pottery-intro-image:hover {
-            filter: contrast(80%);
-            transform: scale(1.1);
+            color: #9374df;
         }
 
         p {
             line-height: 1.5;
+            text-align: justify;
+        }
+
+
+        .wikipedia {
+            text-decoration: underline;
+            transition: all 150ms ease-in-out;
+        }
+
+        .purple .wikipedia {
+            color: #9374df;
+        }
+
+        .wikipedia:hover {
+            color: #9374df;
+            text-decoration: none;
         }
 
         p,
@@ -98,19 +103,27 @@
 
         .grid {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(2, 4fr);
             grid-gap: 15px;
             margin: 15px 0;
+        }
+
+
+        .pottery-intro-image {
+            display: block;
+            margin: 0 auto;
+            border-radius: 10px;
+            transition: all 150ms ease-in-out
+        }
+
+        .pottery-intro-image:hover {
+            filter: contrast(80%);
+            transform: scale(1.4);
         }
 
         .grid img {
             width: 100%;
             border-radius: 10px;
-            transition: all 150ms ease-in-out;
-        }
-
-        .grid img:hover {
-            transform: scale(1.8);
         }
 
         footer {
@@ -118,70 +131,105 @@
             margin-top: 10px;
         }
 
-        /* dark theme code below */
-        .dark {
-            background: #181713;
-            color: white;
+        /* purple theme code below */
+        .purple {
+            background: #e5e5f7;
         }
 
-        .dark .container {
-            background-color: #696965;
+        .purple p {
+            color: #4d4b4f;
+        }
+
+        .purple h1 {
+            color: #4d4b4f;
+        }
+
+        .purple h2 {
+            color: #4d4b4f;
+        }
+
+        .purple footer {
+            color: #4d4b4f;
+        }
+
+        .purple .theme-button {
+            background-color: #9374df;
+            border: 1px solid #9374df;
+        }
+
+        .purple .container {
+            background-color: white;
+
         }
     </style>
 
 </head>
 
 <body>
-    <button class="theme-button">Change theme</button>
+    <button class="theme-button">CHANGE THEME</button>
 
     <div class="container">
         <h1>What is Pottery ? </h1>
         <h2>Creative, relaxing, therapeutic activity 🧘🏽‍♀️</h2>
 
         <img src="https://images.unsplash.com/photo-1590605043466-f5d44f6ea687?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NzB8fHBvdHRlcnl8ZW58MHx8MHx8fDA%3D"
-            alt="pottery making process" target="_blank" class="pottery-intro-image">
+            alt="pottery making process" class="pottery-intro-image">
 
         <div class="grid">
             <img src="https://images.unsplash.com/photo-1523263666618-c992b26eec21?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cG90dGVyeXxlbnwwfHwwfHx8MA%3D%3D"
-                alt="handmade pottery water kettle " target="_blank">
+                alt="handmade pottery water kettle ">
             <img src="https://images.unsplash.com/photo-1523367310297-83064fc42a16?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjh8fHBvdHRlcnl8ZW58MHx8MHx8fDA%3D"
-                alt="Pictures of three handmade pottery bowls" target="_blank">
+                alt="Pictures of three handmade pottery bowls">
             <img src="https://images.unsplash.com/photo-1530006498959-b7884e829a04?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDIzfHx8ZW58MHx8fHx8"
-                alt="Pictures of handmade pottery bowls on top of each others" target="_blank">
+                alt="Pictures of handmade pottery bowls on top of each others">
             <img src="https://images.unsplash.com/photo-1523976888287-7454b4df44f4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NzJ8fHBvdHRlcnl8ZW58MHx8MHx8fDA%3D"
-                alt="handmade pottery mugs" target="_blank">
+                alt="handmade pottery mugs">
         </div>
 
-        <p>Pottery is the art of shaping and forming clay into useful or decorative items, which are hardened by heating
-            in
-            a kiln. </br>Pottery is a creative and relaxing activity that helps people express themselves, feel
+        <p>Pottery is the art of shaping and forming clay into useful or decorative items, which
+            are hardened by heating in a kiln. Pottery is a creative and relaxing activity that helps people express
+            themselves, feel
             accomplished,
             and
-            enjoy a sense of calm. </br>
+            enjoy a sense of calm.
             It’s also practical, as you can make items you use every day, and sustainable, as it
             promotes reusable handmade objects.
+            </br>
+            </br>
+            📖
+            <a class="wikipedia" href="https://en.wikipedia.org/wiki/Pottery" target="_blank">
+                <strong>Read on Wikipedia</strong>
+            </a>
         </p>
 
-        <a class="wikipedia" href="https://en.wikipedia.org/wiki/Pottery">📖 Read on Wikipedia</a>
+        <button class="contact-button">GET IN TOUCH FOR A PRIVATE CLASS</button>
 
-        <button> <a href="https://en.studio-kiwi.com/" target="_blank">Learn Pottery</a></button>
+        <footer>Coded with 💜 by Tirza Samosir</footer>
     </div>
 
-    <footer>Coded with 💜 by Tirza Samosir</footer>
-
-    <!--Below is the JS code-->
+    <!-- JS code below-->
 
     <script>
+
+        function contactButton() {
+            let pottery = prompt("Have you ever taken a pottery class before ? ");
+            let name = prompt("What is your first name ?");
+            let email = prompt("please add your email adress");
+            alert("Thanks " + name + " we will be in touch with you soon 😊")
+        }
+
+        let contact = document.querySelector(".contact-button");
+        contact.addEventListener("click", contactButton)
 
         function changeTheme() {
             let body = document.querySelector("body");
 
-            //  body.classList.toggle("dark");
+            //  body.classList.toggle("purple");
 
-            if (body.classList.contains("dark")) {
-                body.classList.remove("dark")
+            if (body.classList.contains("purple")) {
+                body.classList.remove("purple")
             } else {
-                body.classList.add("dark");
+                body.classList.add("purple");
             }
         }
 
